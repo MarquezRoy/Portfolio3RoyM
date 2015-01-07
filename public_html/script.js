@@ -5,3 +5,9 @@
  */
 
 
+$("document").ready(function(){
+    $("p").css("background-color", "purple");
+    $("#randstuff ~ h4,h5").css("background-color", "purple");
+    
+    
+});
