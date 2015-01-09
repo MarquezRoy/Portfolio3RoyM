@@ -1,13 +1,29 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
+
+
 
 
 $("document").ready(function(){
-    $("p").css("background-color", "purple");
-    $("#randstuff ~ h4,h5").css("background-color", "purple");
+    $("h1, p").css("background-color", "purple");
+    
+    $("h2").bind('mouseover', mouseOverMe).bind ('mouseout', mouseOutMe);
+    
+    $('h1').bind('click', mouseClick);
+    
+    $('p').bind('mouseover', mouseOverMe());
     
     
 });
+
+function mouseOverMe() {
+    $('h2').html("this is easy");
+}
+
+function mouseOutMe() {
+    $('h1').html('This will work');
+}
+
+function mouseClick() {
+    $('p').html('workpls');
+}
